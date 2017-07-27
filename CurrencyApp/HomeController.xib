@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeController">
+            <connections>
+                <outlet property="alertLabel" destination="IZo-U2-VAI" id="Xnb-Q3-K9h"/>
+                <outlet property="tableView" destination="ftq-eF-e22" id="sx7-8v-fle"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ftq-eF-e22">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пропало интернет соединение" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZo-U2-VAI">
+                    <rect key="frame" x="0.0" y="313.5" width="375" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="cXH-2o-amD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ftq-eF-e22" secondAttribute="trailing" id="5Xy-Nx-ugc"/>
+                <constraint firstItem="IZo-U2-VAI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KGO-D6-sSA"/>
+                <constraint firstItem="IZo-U2-VAI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MPT-8u-iV1"/>
+                <constraint firstItem="ftq-eF-e22" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZBu-ZG-LT8"/>
+                <constraint firstAttribute="bottom" secondItem="ftq-eF-e22" secondAttribute="bottom" id="aII-2V-M4k"/>
+                <constraint firstItem="IZo-U2-VAI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sc2-rG-itg"/>
+                <constraint firstItem="ftq-eF-e22" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uSu-mY-Ooy"/>
+                <constraint firstAttribute="trailing" secondItem="IZo-U2-VAI" secondAttribute="trailing" id="yub-59-bAC"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="141.5"/>
+        </view>
+    </objects>
+</document>

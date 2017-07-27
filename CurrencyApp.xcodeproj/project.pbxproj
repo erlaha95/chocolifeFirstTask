@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C5B9992412CD3FF4EBDD2E6 /* libPods-CurrencyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F33D91D1A80528CFB9E12 /* libPods-CurrencyApp.a */; };
+		2D20A9C31F28E99600115787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D20A9C21F28E99600115787 /* main.m */; };
+		2D20A9C61F28E99600115787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D20A9C51F28E99600115787 /* AppDelegate.m */; };
+		2D20A9CF1F28E99600115787 /* CurrencyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D20A9CD1F28E99600115787 /* CurrencyApp.xcdatamodeld */; };
+		2D20A9D11F28E99600115787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D20A9D01F28E99600115787 /* Assets.xcassets */; };
+		2D20A9D41F28E99600115787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D20A9D21F28E99600115787 /* LaunchScreen.storyboard */; };
+		2D20A9E11F28EA9900115787 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D20A9DF1F28EA9900115787 /* HomeController.m */; };
+		2D20A9E21F28EA9900115787 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D20A9E01F28EA9900115787 /* HomeController.xib */; };
+		2D9A14D01F2900AD00E22BC6 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9A14CF1F2900AD00E22BC6 /* APIManager.m */; };
+		2D9A14D41F29D5CD00E22BC6 /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9A14D31F29D5CD00E22BC6 /* Currency.m */; };
+		2D9A14D81F29EA6200E22BC6 /* CurrencyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9A14D61F29EA6200E22BC6 /* CurrencyCell.m */; };
+		2D9A14D91F29EA6200E22BC6 /* CurrencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9A14D71F29EA6200E22BC6 /* CurrencyCell.xib */; };
+		2DC81EC31F2A083F0035B0A4 /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC81EC11F2A083F0035B0A4 /* SettingsVC.m */; };
+		2DC81EC41F2A083F0035B0A4 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC81EC21F2A083F0035B0A4 /* SettingsVC.xib */; };
+		2DC81ECA1F2A0ABD0035B0A4 /* CurrencySettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC81EC81F2A0ABD0035B0A4 /* CurrencySettingsCell.m */; };
+		2DC81ECB1F2A0ABD0035B0A4 /* CurrencySettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC81EC91F2A0ABD0035B0A4 /* CurrencySettingsCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D20A9BE1F28E99600115787 /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D20A9C21F28E99600115787 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D20A9C41F28E99600115787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D20A9C51F28E99600115787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D20A9CE1F28E99600115787 /* CurrencyApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CurrencyApp.xcdatamodel; sourceTree = "<group>"; };
+		2D20A9D01F28E99600115787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D20A9D31F28E99600115787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D20A9D51F28E99600115787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D20A9DE1F28EA9900115787 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		2D20A9DF1F28EA9900115787 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		2D20A9E01F28EA9900115787 /* HomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
+		2D9A14CE1F2900AD00E22BC6 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		2D9A14CF1F2900AD00E22BC6 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		2D9A14D21F29D5CD00E22BC6 /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
+		2D9A14D31F29D5CD00E22BC6 /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
+		2D9A14D51F29EA6200E22BC6 /* CurrencyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyCell.h; sourceTree = "<group>"; };
+		2D9A14D61F29EA6200E22BC6 /* CurrencyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyCell.m; sourceTree = "<group>"; };
+		2D9A14D71F29EA6200E22BC6 /* CurrencyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrencyCell.xib; sourceTree = "<group>"; };
+		2DC81EC01F2A083F0035B0A4 /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
+		2DC81EC11F2A083F0035B0A4 /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
+		2DC81EC21F2A083F0035B0A4 /* SettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		2DC81EC71F2A0ABD0035B0A4 /* CurrencySettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencySettingsCell.h; sourceTree = "<group>"; };
+		2DC81EC81F2A0ABD0035B0A4 /* CurrencySettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencySettingsCell.m; sourceTree = "<group>"; };
+		2DC81EC91F2A0ABD0035B0A4 /* CurrencySettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrencySettingsCell.xib; sourceTree = "<group>"; };
+		4F1EAED707D20EEC901F4BB5 /* Pods-CurrencyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurrencyApp/Pods-CurrencyApp.release.xcconfig"; sourceTree = "<group>"; };
+		635F33D91D1A80528CFB9E12 /* libPods-CurrencyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CurrencyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		816C2053EE09EFD382D3B581 /* Pods-CurrencyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurrencyApp/Pods-CurrencyApp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D20A9BB1F28E99600115787 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C5B9992412CD3FF4EBDD2E6 /* libPods-CurrencyApp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D5F6CABAB98BEC3739B7DD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				635F33D91D1A80528CFB9E12 /* libPods-CurrencyApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D20A9B51F28E99600115787 = {
+			isa = PBXGroup;
+			children = (
+				2D20A9C01F28E99600115787 /* CurrencyApp */,
+				2D20A9BF1F28E99600115787 /* Products */,
+				7A9BA32A613645F7C2FF2DDB /* Pods */,
+				0D5F6CABAB98BEC3739B7DD6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2D20A9BF1F28E99600115787 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D20A9BE1F28E99600115787 /* CurrencyApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D20A9C01F28E99600115787 /* CurrencyApp */ = {
+			isa = PBXGroup;
+			children = (
+				2DC81ECC1F2A56960035B0A4 /* Helper */,
+				2D9A14D11F29D4B100E22BC6 /* Model */,
+				2D9A14DA1F29EA6B00E22BC6 /* View */,
+				2DC81EBF1F2A08080035B0A4 /* Controller */,
+				2D20A9D01F28E99600115787 /* Assets.xcassets */,
+				2D20A9D21F28E99600115787 /* LaunchScreen.storyboard */,
+				2D20A9D51F28E99600115787 /* Info.plist */,
+				2D20A9CD1F28E99600115787 /* CurrencyApp.xcdatamodeld */,
+				2D20A9C11F28E99600115787 /* Supporting Files */,
+				2D9A14CE1F2900AD00E22BC6 /* APIManager.h */,
+				2D9A14CF1F2900AD00E22BC6 /* APIManager.m */,
+			);
+			path = CurrencyApp;
+			sourceTree = "<group>";
+		};
+		2D20A9C11F28E99600115787 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D20A9C21F28E99600115787 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D9A14D11F29D4B100E22BC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D9A14D21F29D5CD00E22BC6 /* Currency.h */,
+				2D9A14D31F29D5CD00E22BC6 /* Currency.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2D9A14DA1F29EA6B00E22BC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D9A14D51F29EA6200E22BC6 /* CurrencyCell.h */,
+				2D9A14D61F29EA6200E22BC6 /* CurrencyCell.m */,
+				2D9A14D71F29EA6200E22BC6 /* CurrencyCell.xib */,
+				2DC81EC71F2A0ABD0035B0A4 /* CurrencySettingsCell.h */,
+				2DC81EC81F2A0ABD0035B0A4 /* CurrencySettingsCell.m */,
+				2DC81EC91F2A0ABD0035B0A4 /* CurrencySettingsCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2DC81EBF1F2A08080035B0A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DC81EC61F2A08590035B0A4 /* Settings */,
+				2DC81EC51F2A08480035B0A4 /* Home Controller */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2DC81EC51F2A08480035B0A4 /* Home Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D20A9DE1F28EA9900115787 /* HomeController.h */,
+				2D20A9DF1F28EA9900115787 /* HomeController.m */,
+				2D20A9E01F28EA9900115787 /* HomeController.xib */,
+			);
+			name = "Home Controller";
+			sourceTree = "<group>";
+		};
+		2DC81EC61F2A08590035B0A4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2DC81EC01F2A083F0035B0A4 /* SettingsVC.h */,
+				2DC81EC11F2A083F0035B0A4 /* SettingsVC.m */,
+				2DC81EC21F2A083F0035B0A4 /* SettingsVC.xib */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		2DC81ECC1F2A56960035B0A4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2D20A9C41F28E99600115787 /* AppDelegate.h */,
+				2D20A9C51F28E99600115787 /* AppDelegate.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		7A9BA32A613645F7C2FF2DDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				816C2053EE09EFD382D3B581 /* Pods-CurrencyApp.debug.xcconfig */,
+				4F1EAED707D20EEC901F4BB5 /* Pods-CurrencyApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D20A9BD1F28E99600115787 /* CurrencyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D20A9D81F28E99600115787 /* Build configuration list for PBXNativeTarget "CurrencyApp" */;
+			buildPhases = (
+				EF31233246A0466B273F144C /* [CP] Check Pods Manifest.lock */,
+				2D20A9BA1F28E99600115787 /* Sources */,
+				2D20A9BB1F28E99600115787 /* Frameworks */,
+				2D20A9BC1F28E99600115787 /* Resources */,
+				C3972A3A9111DE99A012C285 /* [CP] Embed Pods Frameworks */,
+				66452E5BB1D9A16C2F652B23 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CurrencyApp;
+			productName = CurrencyApp;
+			productReference = 2D20A9BE1F28E99600115787 /* CurrencyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D20A9B61F28E99600115787 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = ismailov.com;
+				TargetAttributes = {
+					2D20A9BD1F28E99600115787 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = VNZS5T8L94;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2D20A9B91F28E99600115787 /* Build configuration list for PBXProject "CurrencyApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D20A9B51F28E99600115787;
+			productRefGroup = 2D20A9BF1F28E99600115787 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D20A9BD1F28E99600115787 /* CurrencyApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D20A9BC1F28E99600115787 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D9A14D91F29EA6200E22BC6 /* CurrencyCell.xib in Resources */,
+				2D20A9D41F28E99600115787 /* LaunchScreen.storyboard in Resources */,
+				2D20A9E21F28EA9900115787 /* HomeController.xib in Resources */,
+				2D20A9D11F28E99600115787 /* Assets.xcassets in Resources */,
+				2DC81EC41F2A083F0035B0A4 /* SettingsVC.xib in Resources */,
+				2DC81ECB1F2A0ABD0035B0A4 /* CurrencySettingsCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66452E5BB1D9A16C2F652B23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CurrencyApp/Pods-CurrencyApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3972A3A9111DE99A012C285 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CurrencyApp/Pods-CurrencyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF31233246A0466B273F144C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D20A9BA1F28E99600115787 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D20A9E11F28EA9900115787 /* HomeController.m in Sources */,
+				2DC81EC31F2A083F0035B0A4 /* SettingsVC.m in Sources */,
+				2D9A14D81F29EA6200E22BC6 /* CurrencyCell.m in Sources */,
+				2D20A9CF1F28E99600115787 /* CurrencyApp.xcdatamodeld in Sources */,
+				2DC81ECA1F2A0ABD0035B0A4 /* CurrencySettingsCell.m in Sources */,
+				2D9A14D41F29D5CD00E22BC6 /* Currency.m in Sources */,
+				2D20A9C61F28E99600115787 /* AppDelegate.m in Sources */,
+				2D20A9C31F28E99600115787 /* main.m in Sources */,
+				2D9A14D01F2900AD00E22BC6 /* APIManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2D20A9D21F28E99600115787 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D20A9D31F28E99600115787 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D20A9D61F28E99600115787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D20A9D71F28E99600115787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D20A9D91F28E99600115787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 816C2053EE09EFD382D3B581 /* Pods-CurrencyApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VNZS5T8L94;
+				INFOPLIST_FILE = CurrencyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ismailov.CurrencyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2D20A9DA1F28E99600115787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F1EAED707D20EEC901F4BB5 /* Pods-CurrencyApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VNZS5T8L94;
+				INFOPLIST_FILE = CurrencyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ismailov.CurrencyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D20A9B91F28E99600115787 /* Build configuration list for PBXProject "CurrencyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D20A9D61F28E99600115787 /* Debug */,
+				2D20A9D71F28E99600115787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D20A9D81F28E99600115787 /* Build configuration list for PBXNativeTarget "CurrencyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D20A9D91F28E99600115787 /* Debug */,
+				2D20A9DA1F28E99600115787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2D20A9CD1F28E99600115787 /* CurrencyApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2D20A9CE1F28E99600115787 /* CurrencyApp.xcdatamodel */,
+			);
+			currentVersion = 2D20A9CE1F28E99600115787 /* CurrencyApp.xcdatamodel */;
+			path = CurrencyApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2D20A9B61F28E99600115787 /* Project object */;
+}
