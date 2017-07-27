@@ -17,7 +17,12 @@
 @property (copy, nonatomic) NSString *dateUtcStr;
 @property (assign, nonatomic) NSNumber *dateTS;
 @property (readonly, nonatomic) NSString *dateLocalStr;
+
+@property (readonly, nonatomic) NSDate *date;
+
 @property (nonatomic) BOOL isInterested;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dictionary;
 
 
 

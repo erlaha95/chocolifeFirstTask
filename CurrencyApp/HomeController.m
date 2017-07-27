@@ -10,6 +10,11 @@
 #import "APIManager.h"
 #import "Currency.h"
 #import "CurrencyCell.h"
+#import "CurrencyApp+CoreDataModel.h"
+#import "CurrencyModel+CoreDataClass.h"
+#import "CurrencyModel+CoreDataProperties.h"
+
+#import "AppDelegate.h"
 
 @interface HomeController ()
 
@@ -24,30 +29,56 @@
     UIBarButtonItem *refreshBarButton;
     Currency *mainCurrency;
     
+    NSManagedObjectContext *managedObjectContext;
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    managedObjectContext = ((AppDelegate*)[[UIApplication sharedApplication] delegate]).persistentContainer.viewContext;
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    
     [self.tableView registerNib:[UINib nibWithNibName:@"CurrencyCell" bundle:nil] forCellReuseIdentifier:@"CurrencyCell"];
     
-    currencies = [[NSMutableArray alloc] init];
-    currenciesUsd = [[NSMutableArray alloc] init];
     
-    [self downloadData];
+    // load data from CoreData
+    [self loadCoreData];
     
+    // if nothing was fetched from CoreData
+    if (currencies == nil && currenciesUsd == nil) {
+        currencies = [[NSMutableArray alloc] init];
+        currenciesUsd = [[NSMutableArray alloc] init];
+        
+        // download data from network
+        [self downloadData];
+        
+    } else {
+        
+        // check when data was updated
+        Currency *cur = [currencies firstObject];
+        
+        // if  more then 12 hours
+        if ([cur.date timeIntervalSinceNow] > 12*60*60) {
+            // download data from network
+            [self downloadData];
+        }
+        
+    }
+    
+    [self setupNavBarItems];
+    
+    
+}
+
+-(void)setupNavBarItems {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings"] style:UIBarButtonItemStylePlain target:self action:@selector(showSettingsVC)];
     
     refreshBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"refresh"] style:UIBarButtonItemStylePlain target:self action:@selector(refreshData)];
-
+    
     self.navigationItem.leftBarButtonItem = refreshBarButton;
-    
-    
 }
 
 #pragma mark - Custom methods
@@ -55,12 +86,12 @@
     
     [self downloadData];
     
-    refreshBarButton.customView.transform = CGAffineTransformMakeScale(0, 0);
-    [UIView animateWithDuration:1.0 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:10 options:UIViewAnimationOptionCurveLinear animations:^{
-        refreshBarButton.customView.transform = CGAffineTransformIdentity;
-    } completion:^(BOOL finished) {
-        
-    }];
+//    refreshBarButton.customView.transform = CGAffineTransformMakeScale(0, 0);
+//    [UIView animateWithDuration:1.0 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:10 options:UIViewAnimationOptionCurveLinear animations:^{
+//        refreshBarButton.customView.transform = CGAffineTransformIdentity;
+//    } completion:^(BOOL finished) {
+//        
+//    }];
     
 }
 
@@ -139,21 +170,15 @@
         NSMutableArray *tempCurrenciesArr = [NSMutableArray new];
         for (NSDictionary *item in resources) {
             
-            Currency *currency = [[Currency alloc] init];
-            
             NSDictionary *resource = item[@"resource"];
             NSDictionary *fields = resource[@"fields"];
             NSString *name = fields[@"name"];
-            
             NSArray *chunk = [name componentsSeparatedByString:@"/"];
             
             if (chunk.count > 1) {
-                currency.baseName = chunk.firstObject;
-                currency.currencyName = chunk[1];
+                Currency *currency = [[Currency alloc] initWithDictionary:fields];
                 
-                currency.price = fields[@"price"];
-                currency.dateTS = fields[@"ts"];
-                currency.dateUtcStr = fields[@"utctime"];
+                [self saveInCoreDataObject:currency];
                 
                 [tempCurrenciesArr addObject:currency];
             }
@@ -175,6 +200,58 @@
         
     }];
 
+}
+
+#pragma mark - CoreData manipulating methods
+-(void)saveInCoreDataObject:(Currency*)currency {
+    CurrencyModel *model = [[CurrencyModel alloc] initWithContext:managedObjectContext];
+    model.base = currency.baseName;
+    model.name = currency.currencyName;
+    model.price = currency.price.doubleValue;
+    model.lastUpdate = currency.dateUtcStr;
+    model.isInterested = currency.isInterested;
+    
+    @try {
+        
+        NSError *error = nil;
+        [managedObjectContext save:&error];
+    } @catch (NSException *exception) {
+        NSLog(@"Saving in CoreData - Eception: %@", exception.debugDescription);
+    }
+    
+}
+
+-(void)loadCoreData {
+    
+    NSFetchRequest<CurrencyModel*> *currencyRequest = [CurrencyModel fetchRequest];
+    
+    @try {
+        
+        NSError *error = nil;
+        NSArray<CurrencyModel*> *currencyModelArray = [managedObjectContext executeFetchRequest:currencyRequest error:&error];
+        
+        NSMutableArray<Currency*> *tempArr = [[NSMutableArray alloc] init];
+        for (int i = 0; i < currencyModelArray.count; i ++) {
+            
+            Currency *currency = [[Currency alloc] init];
+            currency.baseName = currencyModelArray[i].base;
+            currency.currencyName = currencyModelArray[i].name;
+            currency.price = [NSNumber numberWithDouble:currencyModelArray[i].price];
+            currency.dateUtcStr = currencyModelArray[i].lastUpdate;
+            currency.isInterested = currencyModelArray[i].isInterested;
+            
+            [tempArr addObject:currency];
+        }
+        
+        currenciesUsd = [[NSMutableArray alloc] initWithArray:tempArr];
+        currencies = [[NSMutableArray alloc] initWithArray:tempArr];
+        
+    } @catch (NSException *exception) {
+        
+        NSLog(@"CoreData - failed to fetch: %@", exception.debugDescription);
+        
+    }
+    
 }
 
 #pragma mark - UITableViewDataSource methods

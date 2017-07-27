@@ -101,12 +101,12 @@
 				2D9A14DA1F29EA6B00E22BC6 /* View */,
 				2DC81EBF1F2A08080035B0A4 /* Controller */,
 				2D20A9D01F28E99600115787 /* Assets.xcassets */,
+				2D20A9C41F28E99600115787 /* AppDelegate.h */,
+				2D20A9C51F28E99600115787 /* AppDelegate.m */,
 				2D20A9D21F28E99600115787 /* LaunchScreen.storyboard */,
 				2D20A9D51F28E99600115787 /* Info.plist */,
 				2D20A9CD1F28E99600115787 /* CurrencyApp.xcdatamodeld */,
 				2D20A9C11F28E99600115787 /* Supporting Files */,
-				2D9A14CE1F2900AD00E22BC6 /* APIManager.h */,
-				2D9A14CF1F2900AD00E22BC6 /* APIManager.m */,
 			);
 			path = CurrencyApp;
 			sourceTree = "<group>";
@@ -173,8 +173,8 @@
 		2DC81ECC1F2A56960035B0A4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				2D20A9C41F28E99600115787 /* AppDelegate.h */,
-				2D20A9C51F28E99600115787 /* AppDelegate.m */,
+				2D9A14CE1F2900AD00E22BC6 /* APIManager.h */,
+				2D9A14CF1F2900AD00E22BC6 /* APIManager.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
