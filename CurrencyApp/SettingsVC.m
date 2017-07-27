@@ -56,17 +56,23 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (!self.currencies[indexPath.row].isInterested) {
-        CurrencySettingsCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CurrencySettingsCell" forIndexPath:indexPath];
+        CurrencySettingsCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
         cell.switchInterest.on = YES;
+        
     }
     
     self.mainCurrency= self.currencies[indexPath.row];
     self.mainCurrency.baseName = self.currencies[indexPath.row].currencyName;
     
+    [self.tableView reloadData];
+    
     NSLog(@"didSelect %@. Price: %@", self.mainCurrency.currencyName, self.mainCurrency.price);
 }
 
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CurrencySettingsCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryNone;
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
